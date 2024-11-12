@@ -1,0 +1,16 @@
+// acá debemos decirle que base de datos nos vamos a conectar
+use("sample_training");
+
+// Metodo de consulta o las query
+
+/*
+	db hace referencia a la base de datos conectada (sample_training).
+	zips es la carpeta que contiene los documentos, es decir, es nuestra colección.
+	find me sirve para encontrar y dentro tengo que pasarle la condición.
+	count es un metodo que me permite hacer un conteo total de las condiciónes cumplidas.
+*/
+db.zips
+  .find({
+    state: "NY",
+  })
+  .count();
